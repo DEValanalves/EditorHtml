@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace EditorHtml {
 
-    public class Viewer
+    public static class Viewer
     {
         public static void Show(string text)
         {
@@ -14,7 +14,7 @@ namespace EditorHtml {
             Console.WriteLine("MODO VISUALIZAÇÃO");
             Console.WriteLine("-------------------");
             Replace(text);
-            Console.WriteLine("-------------------");
+            Console.WriteLine("Pressione qualquer tecla para voltar ao menu");
             Console.ReadKey();
             Menu.Show();
 
@@ -39,12 +39,12 @@ namespace EditorHtml {
                     )
                 )
             );
-            Console.WriteLine("");
+            Console.WriteLine(" ");
             
                 } else {
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.Write(words[i]);
-                    Console.WriteLine("");
+                    Console.WriteLine(" ");
 
                 }
 

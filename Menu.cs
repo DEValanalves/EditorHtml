@@ -15,13 +15,10 @@ namespace EditorHtml
 
             var option = short.Parse(Console.ReadLine());
             HandleMenuOption(option);
-
-
-
         }
         public static void DrawScreen()
         {
-            // linha horizontal
+            // linha horizontal  +---------------+
             Console.Write("+");
             for (int i = 0; i <30; i++)
                 Console.Write("-");
@@ -30,7 +27,7 @@ namespace EditorHtml
                 Console.Write("\n");
             // fim linha horizontal.
 
-            // LINHA VERTICAL
+            // LINHA VERTICAL |
             for(int lines =0; lines <=10; lines++)
             {
                 Console.Write("|");
@@ -53,7 +50,7 @@ namespace EditorHtml
     
         public static void WriteOptions()
         {
-            Console.SetCursorPosition(9, 2); // posiciona a posição do cursor linha, coluna
+            Console.SetCursorPosition(9, 2); // posiciona o cursor na linha e coluna informado
             Console.WriteLine("EDITOR HTML");
             Console.SetCursorPosition(6, 3);
             Console.WriteLine("================");
@@ -76,7 +73,7 @@ namespace EditorHtml
         {
             switch(option){
                 case 1: Editor.Show(); break;
-                case 2: ; break;
+                case 2: Viewer.Show(""); break;
                 case 0: {
                         Console.Clear();
                         Environment.Exit(0);
